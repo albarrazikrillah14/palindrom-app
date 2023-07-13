@@ -3,6 +3,8 @@ package com.medomeckz.palindromapp.ui.third
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.medomeckz.palindromapp.ViewModelFactory
@@ -10,12 +12,13 @@ import com.medomeckz.palindromapp.adapter.AppAdapter
 import com.medomeckz.palindromapp.adapter.LoadingAdapter
 import com.medomeckz.palindromapp.databinding.ActivityThirdBinding
 import com.medomeckz.palindromapp.ui.first.FirstActivity
-import com.medomeckz.palindromapp.ui.second.SecondActivity
 
 class ThirdActivity : AppCompatActivity() {
     private lateinit var thirdViewModel: ThirdViewModel
     private lateinit var factory: ViewModelFactory
     private lateinit var binding: ActivityThirdBinding
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityThirdBinding.inflate(layoutInflater)
@@ -23,6 +26,7 @@ class ThirdActivity : AppCompatActivity() {
 
         setUp()
         btnBack()
+
     }
 
     private fun btnBack() {

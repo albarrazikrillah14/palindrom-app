@@ -1,11 +1,15 @@
 package com.medomeckz.palindromapp.ui.first
 
 import AnswerFragment
+import android.animation.Animator
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
@@ -35,6 +39,24 @@ class FirstActivity : AppCompatActivity() {
         setUp()
         toSecondActivity()
         btnCheck()
+        playAnimation()
+    }
+
+    private fun playAnimation() {
+        ObjectAnimator.ofFloat(binding.ivSample, View.TRANSLATION_X, -30f, 30f).apply {
+            duration = 6000
+            repeatCount = ObjectAnimator.INFINITE
+            repeatMode = ObjectAnimator.REVERSE
+        }.start()
+
+        val name = ObjectAnimator.ofFloat(binding.tiName, View.ALPHA, 1f).setDuration(500)
+        val palindrome = ObjectAnimator.ofFloat(binding.tiPalindrome, View.ALPHA, 1f).setDuration(500)
+        val check = ObjectAnimator.ofFloat(binding.btnCheck, View.ALPHA, 1f).setDuration(500)
+        val next = ObjectAnimator.ofFloat(binding.btnNext, View.ALPHA, 1f).setDuration(500)
+
+        AnimatorSet().apply {
+            playSequentially(name, palindrome, check, next)
+        }.start()
     }
 
     private fun btnCheck() {

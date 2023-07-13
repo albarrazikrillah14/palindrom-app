@@ -23,4 +23,6 @@
     <string name="searchbar_hint">Masukkan Nama..</string>
     <string name="timeout">timeout</string>
     <string name="reload">reload</string>
+    <string name="data_not_found">Data Not Found</string>
+    <string name="third_screen">Third Screen</string>
 </resources>

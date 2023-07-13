@@ -1,8 +1,10 @@
 package com.medomeckz.palindromapp.adapter
 
+import android.app.Activity
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.app.ActivityOptionsCompat
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
@@ -10,6 +12,8 @@ import com.bumptech.glide.Glide
 import com.medomeckz.palindromapp.data.model.DataItem
 import com.medomeckz.palindromapp.databinding.ItemUserBinding
 import com.medomeckz.palindromapp.ui.second.SecondActivity
+import androidx.core.util.Pair
+
 
 class AppAdapter: PagingDataAdapter<DataItem, AppAdapter.ViewHolder>(DIFF_CALLBACK) {
     class ViewHolder(private val binding: ItemUserBinding): RecyclerView.ViewHolder(binding.root) {
@@ -28,7 +32,17 @@ class AppAdapter: PagingDataAdapter<DataItem, AppAdapter.ViewHolder>(DIFF_CALLBA
                 itemView.setOnClickListener {
                     val intent = Intent(itemView.context, SecondActivity::class.java)
                     intent.putExtra(SecondActivity.NAME, "${data.firstName} ${data.lastName}")
-                    it.context.startActivity(intent)
+
+                    val optionsCompat: ActivityOptionsCompat =
+                        ActivityOptionsCompat.makeSceneTransitionAnimation(
+                            itemView.context as Activity,
+
+                            Pair(binding.cvUser, binding.cvUser.transitionName),
+                            Pair(binding.tvFirst, binding.tvFirst.transitionName),
+                            Pair(binding.tvLast, binding.tvLast.transitionName),
+                            Pair(binding.tvEmail, binding.tvEmail.transitionName)
+                        )
+                    itemView.context.startActivity(intent, optionsCompat.toBundle())
                 }
             }
         }
