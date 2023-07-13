@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/cv_user"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            tools:src="@tools:sample/avatars"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+            android:id="@+id/tv_first"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="First name"
+            android:layout_marginStart="8dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/cv_user"
+            app:layout_constraintTop_toTopOf="@id/cv_user"
+            app:layout_constraintStart_toEndOf="@id/cv_user"/>
+        <TextView
+            android:id="@+id/tv_last"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="Last name"
+            android:layout_marginStart="4dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/cv_user"
+            app:layout_constraintTop_toTopOf="@id/cv_user"
+            app:layout_constraintStart_toEndOf="@id/tv_first"/>
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="kldjlkfjlkjkla@gmail.com"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_first"
+            app:layout_constraintStart_toEndOf="@id/cv_user"/>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            app:layout_constraintTop_toBottomOf="@id/cv_user"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

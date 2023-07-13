@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Palindrome App</string>
+    <string name="name">Name</string>
+    <string name="palindrome">Palindrome</string>
+    <string name="first_activity">First Activity</string>
+    <string name="second_activity">Second Activity</string>
+    <string name="third_activity">Third Activity</string>
+    <string name="welcome">Welcome to Palindrome App</string>
+    <string name="aplikasi">logo aplikasi</string>
+    <string name="check">CHECK</string>
+    <string name="next">NEXT</string>
+    <string name="check_input">Lengkapi Terlebih Dahulu</string>
+    <string name="coba_lagi">Coba Lagi</string>
+    <string name="tutup">Tutup</string>
+    <string name="result">%s Palindrome!</string>
+    <string name="start">Start</string>
+    <string name="sample">Mr. Owl ate my metal worm</string>
+    <string name="welcome_">Welcome,</string>
+    <string name="selected">Selected User Name</string>
+    <string name="choose_user">Choose a User</string>
+    <string name="back">back</string>
+    <string name="second_screen">Second Screen</string>
+    <string name="searchbar_hint">Masukkan Nama..</string>
+    <string name="timeout">timeout</string>
+    <string name="reload">reload</string>
+</resources>
