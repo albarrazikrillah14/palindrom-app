@@ -1,5 +1,7 @@
 package com.medomeckz.palindromapp.data.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
 data class ResponseUser(
@@ -34,12 +36,14 @@ data class Support(
 	val url: String
 )
 
+@Entity(tableName = "user")
 data class DataItem(
-	@field:SerializedName("last_name")
-	val lastName: String,
-
+	@PrimaryKey
 	@field:SerializedName("id")
 	val id: Int,
+
+	@field:SerializedName("last_name")
+	val lastName: String,
 
 	@field:SerializedName("avatar")
 	val avatar: String,
