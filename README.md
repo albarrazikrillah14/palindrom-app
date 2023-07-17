@@ -16,4 +16,5 @@ Aplikasi bertujuan untuk test seleksi Kampus Mederka Batch 5: Mobile Developer I
 <img src="https://github.com/albarrazikrillah14/Palindrom-App/assets/72233920/c096c7e7-6442-48c0-9164-66ee96703972?s=160" height="300px" alt="Screenshot_20230713_235916">
 <img src="https://github.com/albarrazikrillah14/Palindrom-App/assets/72233920/821879ea-49e3-4638-add8-54a682731ec2?s=160" height="300px" alt="Screenshot_20230713_235950">
 <img src="https://github.com/albarrazikrillah14/Palindrom-App/assets/72233920/4cafc0f1-618a-47ed-9e8e-79b18a4dbb62?s=160" height="300px" alt="Screenshot_20230714_000012">
-<img src="https://github.com/albarrazikrillah14/Palindrom-App/assets/72233920/46ce1a90-bae3-4a57-9c38-d2d786f81ac2?s=160" height="300px" alt="Screenshot_20230714_001334">
+<img src="https://github.com/albarrazikrillah14/Palindrom-App/assets/72233920/a0796503-b2ab-4bfb-a9c1-c4f3c32a46f3?s=160" height="300px" alt="Screenshot_20230714_001334">
+
